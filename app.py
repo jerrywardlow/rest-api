@@ -64,7 +64,7 @@ def update_task(task_id):
     return jsonify({'task': task[0]})
 
 # DELETE routes
-@app.route('todo/api/v1/tasks/<int:task_id>', methods=['DELETE'])
+@app.route('/todo/api/v1/tasks/<int:task_id>', methods=['DELETE'])
 def delete_task(task_id):
     task = [task for task in tasks if task['id'] == task_id]
     if len(task) == 0:
